@@ -1,0 +1,19 @@
+name: "Question"
+description: "How do I…? Not sure it's a problem? Ask here"
+labels: ["question", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please don't attach a board unless you choose to. If one is needed, we will ask."
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you want to do, and what you tried.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "Help › About shows the version and build."

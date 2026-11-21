@@ -1,0 +1,53 @@
+name: "Bug report"
+description: "Something isn't working as expected"
+labels: ["bug", "needs-triage"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: And what did you expect to happen?
+      placeholder: "I moved a part and its tracks stayed behind."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a board
+        2. Select a part and press M
+        3. ...
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where in Typmax?
+      description: Optional — a guess is fine.
+      options:
+        - Editing the board
+        - Routing
+        - Design checks
+        - Exporting or manufacturing files
+        - Schematic
+        - Footprints and parts library
+        - Opening or saving files
+        - Something else
+  - type: input
+    id: version
+    attributes:
+      label: Typmax version
+      description: "Help › About shows it."
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 15, Windows 11, …"
+  - type: textarea
+    id: error
+    attributes:
+      label: Error details
+      description: "If Typmax showed an error, press Copy error details and paste it here. It never contains your board."
+      render: text
+  - type: markdown
+    attributes:
+      value: "Screenshots help. Please don't attach board files unless you're happy for them to be public — we'll ask if we need one."
